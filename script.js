@@ -3,8 +3,8 @@ document.documentElement.classList.add("js");
 const CONFIG = {
   tokenAddress: "",
   pumpFunUrl: "",
-  twitter: "https://x.com/moustacheonx",
-  telegram: "https://t.me",
+  twitter: "https://x.com/densejuicy_x",
+  telegram: "",
 };
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -22,9 +22,9 @@ function initContract() {
   const address = CONFIG.tokenAddress;
 
   if (!address) {
-    display.textContent = "CePvX5yJSR3ZkSnU5SoeMuYS1exwBJR1YKyN5Ps8pump";
+    display.textContent = "TBA";
     copyBtn.disabled = true;
-    copyBtn.title = "Contract address CePvX5yJSR3ZkSnU5SoeMuYS1exwBJR1YKyN5Ps8pump";
+    copyBtn.title = "Contract address TBA";
     return;
   }
 
@@ -108,12 +108,12 @@ function initPaws() {
   for (let i = 0; i < count; i++) {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    use.setAttribute("href", "#stache");
+    use.setAttribute("href", "#star");
     svg.appendChild(use);
 
-    const size = 16 + Math.random() * 22;
+    const size = 14 + Math.random() * 16;
     const tones = ["var(--gold)", "var(--cream)", "var(--sky)", "var(--ginger)"];
-    svg.style.width = `${size * 2.15}px`;
+    svg.style.width = `${size}px`;
     svg.style.height = `${size}px`;
     svg.style.left = `${Math.random() * 100}%`;
     svg.style.color = tones[i % tones.length];
@@ -226,7 +226,7 @@ function initPawTrail() {
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-    use.setAttribute("href", "#stache");
+    use.setAttribute("href", "#star");
     svg.appendChild(use);
     svg.classList.add("trail-paw");
     svg.style.left = `${e.clientX}px`;
@@ -255,7 +255,7 @@ function initConfetti() {
   const field = document.querySelector(".confetti-field");
   if (!field || reduceMotion) return;
 
-  const colors = ["#ffe14d", "#3ec8ea", "#ff5d86", "#7eb6ef", "#fff6d8", "#8eb6ff"];
+  const colors = ["#ffe14d", "#3ec8ea", "#ff3b4e", "#7eb6ef", "#fff6d8", "#8eb6ff"];
   const count = window.innerWidth < 720 ? 16 : 32;
 
   for (let i = 0; i < count; i++) {
